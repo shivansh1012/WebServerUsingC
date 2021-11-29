@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web Server</title>
+</head>
+
+<style type="text/css">
+  /* style for cards */
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body {
+    font-family: arial;
+  }
+
+  .main {
+
+    margin: 2%;
+  }
+
+  .card {
+    width: 20%;
+    display: inline-block;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    border-radius: 5px;
+    margin: 2%;
+  }
+
+  .image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+
+
+  }
+
+  .title {
+
+    text-align: center;
+    padding: 10px;
+
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .des {
+    padding: 3px;
+    text-align: center;
+
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  button:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+  }
+
+   /* style for nav bar */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 75px;
+ background: #2980b9;
+ box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #2980b9;
+ margin: auto;
+}
+nav .navbar .title {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 550px;
+}
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#Home{
+  background: #fff;
+}
+
+/*css for team list*/
+.team {
+	padding: 0;
+	margin: 50px auto;
+	list-style: none;
+	text-align: center;
+}
+.team li {
+	display: inline-block;
+	width: 20%;
+	min-width: 200px;
+	max-width: 230px;
+	padding: 80px 20px 40px;
+	position: relative;
+	vertical-align: top;
+	margin: 10px;
+	font-family: 'helvetica', san-serif;
+	min-height: 25vh;
+	background: white;
+	border: 1px solid #252727;
+	text-align: left;
+}
+.team li h2 {
+	font-size: 114px;
+	margin: 0;
+	position: absolute;
+	opacity: 0.2;
+	top: 50px;
+	right: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.team li h3 {
+	font-size: 20px;
+	color: black;
+	margin-bottom: 5px;
+}
+.team li p {
+	font-size: 16px;
+	line-height: 18px;
+	color: black;
+	margin-top: 5px;
+}
+.team li button {
+	background: transparent;
+	border: 1.5px solid black;
+	padding: 10px 20px;
+	color: black;
+	border-radius: 3px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	transform: translateY(-40px);
+	opacity: 0;
+	cursor: pointer;
+	overflow: hidden;
+}
+.team li button:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 120%;
+	background: #b7b7b7;
+	top: 0;
+	opacity: 0;
+	left: -140px;
+	border-radius: 0 20px 20px 0;
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+	
+}
+.team li:hover button {
+	transform: translateY(5px);
+	opacity: 1;
+}
+.team li button:hover {
+	color: #262a2b;
+}
+.team li button:hover:before {
+	left: 0;
+	opacity: 1;
+}
+.team li:hover h2 {
+	top: 0px;
+	opacity: 0.6;
+}
+
+.team li:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	z-index: -1;
+	background: #fff;
+	transform: skew(2deg, 2deg);
+}
+.team li:after {
+	content: '';
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(255, 255, 255, 0.02);
+}
+.team li:nth-child(1):before {
+	background: #C9FFBF;
+background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
+background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+}
+.team li:nth-child(2):before {
+	background: #f2709c;
+background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+background: linear-gradient(to right, #ff9472, #f2709c);
+}
+.team li:nth-child(3):before {
+	background: #c21500;
+background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+background: linear-gradient(to right, #ffc500, #c21500);
+}
+
+.team li:nth-child(4):before {
+	background: #FC354C;
+background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+background: linear-gradient(to right, #0ABFBC, #FC354C);
+}
+
+.mtitle{
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  margin-left: 700px ;
+  margin-top: 70px;
+  
+}
+
+.mtitle::before{
+  content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid #2980b9;
+}
+
+
+</style>
+
+<body>
+
+  <div class="main">
+    <nav>
+    <div class="navbar">
+      <div class="title">OS Project - Web Server</a></div>
+      <ul class="menu">
+        <li><a href="#Home">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h3 class="mtitle" >Web Server</h3>
+  <p style="margin-top: 10px; margin-bottom: 10px;"></p>
+  
+    <!--cards -->
+    
+
+    <div class="card">
+
+      <div class="image">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+      </div>
+      <div class="title">
+        <h1>
+          Chapter 1</h1>
+      </div>
+      <div class="des">
+        <p><b>Process Managment</b></p>
+        <a href="https://www.geeksforgeeks.org/introduction-of-process-management/"><button>Read More</button> </a>
+      </div>
+    </div>
+    <!--cards -->
+
+
+    <div class="card">
+
+      <div class="image">
+        <img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
+      </div>
+      <div class="title">
+        <h1>
+          Chapter 2</h1>
+      </div>
+      <div class="des">
+        <p><b>Process Synchronization</b></p>
+        <a href="https://www.geeksforgeeks.org/introduction-of-process-synchronization/"><button>Read More</button> </a>
+      </div>
+    </div>
+    <!--cards -->
+
+
+    <div class="card">
+
+      <div class="image">
+        <img src="https://cdn.pixabay.com/photo/2015/11/07/11/41/lake-1031405_1280.jpg">
+      </div>
+      <div class="title">
+        <h1>
+         Chapter 3</h1>
+      </div>
+      <div class="des">
+        <p><b>Deadlock</b></p>
+        <a href="https://www.geeksforgeeks.org/introduction-of-deadlock-in-operating-system/"><button>Read More</button> </a>
+      </div>
+    </div>
+    <!--cards -->
+
+
+    <div class="card">
+
+      <div class="image">
+        <img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
+      </div>
+      <div class="title">
+        <h1>
+          Chapter 4</h1>
+      </div>
+      <div class="des">
+        <p><b>Memory Managment</b></p>
+        <a href="https://www.geeksforgeeks.org/memory-management-in-operating-system/"><button>Read More</button> </a>
+      </div>
+    </div>
+  </div>
+  <h3 class="mtitle" >MEET THE TEAM</h3>
+    <ul class="team">
+      <li>
+        <h2>01</h2>
+        <h3>ANAND SINGH TANWAR</h3>
+        <p>
+          ENG19CT005
+        </p>
+        <button>About</button>
+      </li>
+      <li>
+        <h2>02</h2>
+        <h3>SHIVANSH PANDEY</h3>
+        <p>
+          ENG19CT0024
+        </p>
+        <button>About</button>
+      </li>
+      <li>
+        <h2>03</h2>
+        <h3>PIYUSH<br>SHARMA</h3>
+        <p>
+           ENG19CT0025
+        </p>
+        <button>About</button>
+      </li>
+    </ul>
+
+
+
+</body>
+
+</html>
